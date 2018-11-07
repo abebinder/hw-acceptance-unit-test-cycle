@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rotten Potatoes!</title>
+<link rel="stylesheet" media="screen" href="/assets/application-6c5c8e9af05174adb09a79766aceadb37217805752b6205638ce8b68dfb909cc.css" />
+<script src="/assets/application-f0befbc441047cbdbce5ca57f83c42618b7c474c515324d3db14bb39d0b21974.js"></script>
+
+</head>
+<body>
+<h1 class='title'>Rotten Potatoes!</h1>
+<div id='main'>
+<div class='message' id='notice'>Alien was successfully updated.</div>
+<h2>Details about Alien</h2>
+<ul id='details'>
+<li>
+Rating:
+R
+</li>
+<li id='director_element'>
+Director:
+Ridley Scott
+</li>
+<li>
+Released on:
+May 25, 1979
+</li>
+</ul>
+<h3>Description:</h3>
+<p id='description'></p>
+<a href="/movies/3/edit">Edit</a>
+<form class="button_to" method="post" action="/movies/3"><input type="hidden" name="_method" value="delete" /><input confirm="Are you sure?" type="submit" value="Delete" /></form>
+<a href="/movies">Back to movie list</a>
+
+</div>
+</body>
+</html>

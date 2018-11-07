@@ -40,6 +40,5 @@ end
 
 
 Then(/^the director of "([^"]*)" should be "([^"]*)"$/) do |title, director|
-  movie = Movie.find_by title:title
-  expect(movie["director"]).to eq director
+  page.find("li#director_element").text.should == "Director: #{director}"
 end

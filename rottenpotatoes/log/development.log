@@ -1012,3 +1012,117 @@ Processing by MoviesController#index as HTML
   [1m[36mMovie Load (5.8ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
   Rendered movies/index.html.haml within layouts/application (10.4ms)
 Completed 200 OK in 509ms (Views: 501.8ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/assets/rails.png" for 172.16.128.47 at 2018-11-07 13:29:00 -0700
+
+
+Started GET "/movies" for 172.16.128.47 at 2018-11-07 13:29:04 -0700
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (3.8ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (107.4ms)
+Completed 200 OK in 1134ms (Views: 850.7ms | ActiveRecord: 31.2ms)
+
+
+Started GET "/assets/application.self-2b9b4ceb35a4568bfbe3001eb6cf7d691787c8ec9b2018eecbc3c235cc74b7a4.css?body=1" for 172.16.128.47 at 2018-11-07 13:29:05 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 172.16.128.47 at 2018-11-07 13:29:06 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 172.16.128.47 at 2018-11-07 13:29:06 -0700
+
+
+Started GET "/assets/application.self-ac4347b135ab8935f2dd20089f2acc8bec1d6b2ad528a80fcb03cd445dbd4d27.js?body=1" for 172.16.128.47 at 2018-11-07 13:29:06 -0700
+
+
+Started GET "/movies/1" for 172.16.128.47 at 2018-11-07 13:29:31 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (5.5ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 353ms (Views: 332.3ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/movies/1/edit" for 172.16.128.47 at 2018-11-07 13:29:43 -0700
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (3.4ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/edit.html.haml within layouts/application (78.9ms)
+Completed 200 OK in 394ms (Views: 389.0ms | ActiveRecord: 3.4ms)
+
+
+Started PUT "/movies/1" for 172.16.128.47 at 2018-11-07 13:29:47 -0700
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T84NQ7brkw327iUZWkpxzqlTz26nh6nMPH2cU2UYhxOmCsw9+6ITjPtngBYm1y41iKNals5Kmq5Ev9xFXCMo2A==", "movie"=>{"title"=>"a", "director"=>"efefef", "rating"=>"G", "release_date(1i)"=>"2018", "release_date(2i)"=>"11", "release_date(3i)"=>"7"}, "commit"=>"Update Movie Info", "id"=>"1"}
+  [1m[35mMovie Load (3.8ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (12.4ms)[0m  UPDATE "movies" SET "director" = ?, "updated_at" = ? WHERE "movies"."id" = ?  [["director", "efefef"], ["updated_at", "2018-11-07 20:29:47.737609"], ["id", 1]]
+  [1m[36m (9.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://172.16.135.38:8000/movies/1
+Completed 302 Found in 34ms (ActiveRecord: 25.3ms)
+
+
+Started GET "/movies/1" for 172.16.128.47 at 2018-11-07 13:29:47 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (4.9ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 525ms (Views: 518.3ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/movies" for 172.16.128.47 at 2018-11-07 13:29:51 -0700
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (5.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (9.6ms)
+Completed 200 OK in 514ms (Views: 506.1ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/movies/1" for 172.16.128.47 at 2018-11-07 13:31:48 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (5.5ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 508ms (Views: 500.9ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/movies/1/edit" for 172.16.128.47 at 2018-11-07 13:31:50 -0700
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (5.0ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/edit.html.haml within layouts/application (5.4ms)
+Completed 200 OK in 510ms (Views: 503.6ms | ActiveRecord: 5.0ms)
+
+
+Started PUT "/movies/1" for 172.16.128.47 at 2018-11-07 13:31:52 -0700
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q+qIkXIi6QCXm2oy2cDg0Ua61Eepa6LJsNhU4pQgPwhCLknvP2tpgZoSzz2lXb8qZ0pBv8CmkavIGhT0rRuQww==", "movie"=>{"title"=>"a", "director"=>"efefef", "rating"=>"G", "release_date(1i)"=>"2018", "release_date(2i)"=>"11", "release_date(3i)"=>"7"}, "commit"=>"Update Movie Info", "id"=>"1"}
+  [1m[35mMovie Load (4.3ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://172.16.135.38:8000/movies/1
+Completed 302 Found in 12ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/movies/1" for 172.16.128.47 at 2018-11-07 13:31:52 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (6.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/show.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 329ms (Views: 321.6ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/movies/1" for 172.16.128.47 at 2018-11-07 13:33:11 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (3.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 339ms (Views: 335.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/movies/1" for 172.16.128.47 at 2018-11-07 13:35:34 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (4.4ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/show.html.haml within layouts/application (52.5ms)
+Completed 200 OK in 1615ms (Views: 1184.4ms | ActiveRecord: 42.0ms)
