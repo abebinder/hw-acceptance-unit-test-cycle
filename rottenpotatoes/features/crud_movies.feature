@@ -3,7 +3,7 @@ Feature: Creating, Updating, and Deleting Movies
     So that I can update the rotten potatoes data base
     I want to have the abillity to create and destroy movie in the databse
 
-background: database is populated with movies
+Background: movies in database
   Given the following movies exist:
   | title                   | rating | release_date |
   | Aladdin                 | G      | 25-Nov-1992  |
@@ -19,7 +19,6 @@ background: database is populated with movies
   | Chicken Run             | G      | 21-Jun-2000  |
 
   And I am on the RottenPotatoes home page
-  Then 10 seed movies should exist
 
 Scenario: Adding a single movie
   Given I am on the homepage
@@ -27,3 +26,10 @@ Scenario: Adding a single movie
   And I fill in "Title" with "Fantastic Mr. Fox"
   And I press "Save Changes"
   Then I should see "Fantastic Mr. Fox"
+
+Scenario: Adding a single movie
+  Given I am on the details page for "The Incredibles"
+  And I press "Delete"
+  Then I should be on the homepage
+  And I should see "Movie 'The Incredibles' deleted."
+  And I should not see /td='The Incredibles'/
