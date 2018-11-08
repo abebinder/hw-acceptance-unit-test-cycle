@@ -28,6 +28,8 @@ module NavigationHelpers
       edit_movie_path(Movie.find_by_title($1).id)
 
     when /^the details page for "([^"]+)"$/
+      puts $1
+      puts Movie.find_by_title($1)
       movie_path(Movie.find_by_title($1).id)
 
     when /^the Similar Movies page for "([^"]+)"$/
