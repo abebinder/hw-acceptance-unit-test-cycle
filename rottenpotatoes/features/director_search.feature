@@ -17,7 +17,6 @@ Feature: search for movies by director
     When I go to the edit page for "Alien"
     And  I fill in "Director" with "Ridley Scott"
     And  I press "Update Movie Info"
-    Then show me the page
     Then the director of "Alien" should be "Ridley Scott"
 
   Scenario: find movie with same director
